@@ -9,6 +9,11 @@
 
   @include tablet {
     padding: 27px 0;
+    opacity: 0.8;
+  }
+
+  &.active {
+    opacity: 1;
   }
 
   & .container {
@@ -113,10 +118,6 @@
 
       @include tablet {
         padding: 0;
-        background-color: rgba($color: #4f4f4f, $alpha: 0);
-      }
-
-      &:hover {
         background-color: rgba($color: #4f4f4f, $alpha: 0);
       }
     }

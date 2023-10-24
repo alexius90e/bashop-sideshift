@@ -20,7 +20,7 @@
       z-index: 3;
       display: block;
       height: 100%;
-      max-width: 1680px;
+      max-width: 1720px;
       aspect-ratio: 2.43 / 1;
       background-image: url(../assets/doc-bg.png);
       background-repeat: no-repeat;
@@ -94,7 +94,7 @@
       height: 140px;
       width: 140px;
       background: url(../assets/doc-link-bg.svg) center no-repeat;
-      transition: all ease-in-out 0.2s;
+      transition: all ease-in 0.1s;
 
       &::after {
         content: '';

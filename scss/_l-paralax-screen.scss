@@ -14,6 +14,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    -webkit-background-size: cover;
 
     &_top {
       position: relative;
@@ -35,6 +36,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        -webkit-background-size: cover;
 
         @include mobile {
           display: none;

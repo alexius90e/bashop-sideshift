@@ -1,11 +1,14 @@
 const burgerButton = document.querySelector('.header__burger');
 
+const header = document.querySelector('.header');
+
 const nav = document.querySelector('.header__nav');
 
 burgerButton.addEventListener('click', (event) => {
   document.body.classList.toggle('active');
   event.currentTarget.classList.toggle('active');
   nav.classList.toggle('active');
+  header.classList.toggle('active');
 });
 
 nav.addEventListener('click', (event) => {
@@ -14,6 +17,7 @@ nav.addEventListener('click', (event) => {
     document.body.classList.toggle('active');
     event.currentTarget.classList.toggle('active');
     burgerButton.classList.toggle('active');
+    header.classList.toggle('active');
   }
 });
 

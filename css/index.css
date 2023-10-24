@@ -111,7 +111,11 @@ ul {
 @media (max-width: 768px) {
   .header {
     padding: 27px 0;
+    opacity: 0.8;
   }
+}
+.header.active {
+  opacity: 1;
 }
 .header .container {
   position: relative;
@@ -238,9 +242,6 @@ ul {
     background-color: rgba(79, 79, 79, 0);
   }
 }
-.header__nav-link:hover {
-  background-color: rgba(79, 79, 79, 0);
-}
 .header__burger {
   display: none;
   height: 25px;
@@ -278,6 +279,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -webkit-background-size: cover;
 }
 .paralax-screen__block_top {
   position: relative;
@@ -300,6 +302,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -webkit-background-size: cover;
 }
 @media (max-width: 576px) {
   .paralax-screen__block_top::before {
@@ -614,7 +617,7 @@ ul {
   z-index: 3;
   display: block;
   height: 100%;
-  max-width: 1680px;
+  max-width: 1720px;
   aspect-ratio: 2.43/1;
   background-image: url(../assets/doc-bg.png);
   background-repeat: no-repeat;
@@ -700,8 +703,8 @@ ul {
   height: 140px;
   width: 140px;
   background: url(../assets/doc-link-bg.svg) center no-repeat;
-  -webkit-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in 0.1s;
+  transition: all ease-in 0.1s;
 }
 .doc__link-image::after {
   content: "";
