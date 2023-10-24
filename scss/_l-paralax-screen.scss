@@ -4,6 +4,10 @@
   max-height: 2160px;
   scroll-behavior: smooth;
 
+  @include mobile {
+    max-height: 1840px;
+  }
+
   &__block {
     height: 50%;
     background-attachment: fixed;
@@ -14,6 +18,10 @@
     &_top {
       position: relative;
       background-image: url(../assets/bg-top.png);
+
+      @include mobile {
+        background-image: url(../assets/bg-top-sm.png);
+      }
 
       &::before {
         content: '';
@@ -27,11 +35,19 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
 
     &_bottom {
       background-image: url(../assets/bg-bottom.png);
+
+      @include mobile {
+        background-image: url(../assets/bg-bottom-sm.png);
+      }
     }
   }
 
