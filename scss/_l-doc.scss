@@ -1,3 +1,129 @@
 .doc {
-  
+  padding: 96px 0;
+  overflow: hidden;
+
+  @include mobile {
+    padding: 45px 0 61px;
+  }
+
+  & .container {
+    position: relative;
+    text-align: right;
+    aspect-ratio: 2.08 / 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 3;
+      display: block;
+      height: 100%;
+      max-width: 1680px;
+      aspect-ratio: 2.43 / 1;
+      background-image: url(../assets/doc-bg.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain;
+
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 103px;
+    left: 50%;
+    z-index: 5;
+    transform: translateX(-50%);
+
+    @include laptop {
+      max-width: none;
+      position: static;
+      transform: none;
+    }
+  }
+
+  &__title {
+    margin: 0 0 60px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+
+    @include mobile {
+      margin: 0 0 20px;
+      font-size: 22px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: $white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &:hover &-image {
+      filter: drop-shadow(-4px 4px 0px #ff6e20);
+    }
+
+    &-image {
+      position: relative;
+      height: 140px;
+      width: 140px;
+      background: url(../assets/doc-link-bg.svg) center no-repeat;
+      transition: all ease-in-out 0.2s;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 66px;
+        height: 66px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      &_whitepaper::after {
+        background-image: url(../assets/whitepaper.svg);
+      }
+
+      &_roadmap::after {
+        background-image: url(../assets/roadmap.svg);
+      }
+
+      &_tokenomics::after {
+        background-image: url(../assets/tokenomics.svg);
+      }
+
+      &_invest::after {
+        background-image: url(../assets/invest.svg);
+      }
+    }
+  }
 }
