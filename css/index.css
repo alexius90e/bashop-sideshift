@@ -265,11 +265,29 @@ ul {
           transform: rotate(-90deg);
 }
 
+.main {
+  position: relative;
+  background-image: url(../assets/ellipse.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 2700px;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../assets/zen-bg.svg);
+}
+
 .paralax-screen {
   position: relative;
   height: 200vh;
   max-height: 2160px;
-  scroll-behavior: smooth;
 }
 @media (max-width: 576px) {
   .paralax-screen {
@@ -292,30 +310,18 @@ ul {
     background-image: url(../assets/bg-top-sm.png);
   }
 }
-.paralax-screen__block_top::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url(../assets/bg-columns.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-@media (max-width: 576px) {
-  .paralax-screen__block_top::before {
-    display: none;
-  }
-}
 .paralax-screen__block_bottom {
   background-image: url(../assets/bg-bottom.png);
 }
 @media (max-width: 576px) {
   .paralax-screen__block_bottom {
     background-image: url(../assets/bg-bottom-sm.png);
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .paralax-screen .imageDiv {
+    background-attachment: scroll;
+    background-size: auto 100vh;
   }
 }
 .paralax-screen__stones {
