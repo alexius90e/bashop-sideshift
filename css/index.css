@@ -18,7 +18,10 @@ body {
 }
 @media (max-width: 768px) {
   body.active {
+    height: 100%;
     overflow: hidden;
+    width: 100%;
+    position: fixed;
   }
 }
 
@@ -279,7 +282,6 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-background-size: cover;
 }
 .paralax-screen__block_top {
   position: relative;
@@ -302,7 +304,6 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-background-size: cover;
 }
 @media (max-width: 576px) {
   .paralax-screen__block_top::before {

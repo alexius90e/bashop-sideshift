@@ -13,8 +13,10 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     &_top {
       position: relative;
@@ -35,8 +37,10 @@
         background-image: url(../assets/bg-columns.png);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
         -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 
         @include mobile {
           display: none;
