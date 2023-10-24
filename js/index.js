@@ -1,0 +1,1 @@
+const  paralaxScreen = document.querySelector('.paralax-screen');

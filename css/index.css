@@ -4,7 +4,6 @@ html {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-style: normal;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -41,6 +40,7 @@ ul {
   position: relative;
   height: 200vh;
   max-height: 2160px;
+  scroll-behavior: smooth;
 }
 .paralax-screen__block {
   height: 50%;
@@ -83,4 +83,61 @@ ul {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.zen-divider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  background-color: #ff6e20;
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  .zen-divider {
+    gap: 20px;
+  }
+}
+.zen-divider__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+@media (max-width: 576px) {
+  .zen-divider__item {
+    gap: 20px;
+  }
+}
+.zen-divider__item::after, .zen-divider__item::before {
+  content: "";
+  display: block;
+  width: 165px;
+  height: 39px;
+  padding: 10px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 576px) {
+  .zen-divider__item::after, .zen-divider__item::before {
+    width: 88px;
+    height: 21px;
+    padding: 4px;
+  }
+}
+.zen-divider__item::after {
+  background-image: url(../assets/zen-game-full.svg);
+}
+.zen-divider__item::before {
+  background-image: url(../assets/zen-game-outline.svg);
 }

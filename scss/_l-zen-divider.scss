@@ -1,0 +1,48 @@
+.zen-divider {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: #ff6e20;
+  overflow: hidden;
+
+  @include mobile {
+    gap: 20px;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include mobile {
+      gap: 20px;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      width: 165px;
+      height: 39px;
+      padding: 10px 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include mobile {
+        width: 88px;
+        height: 21px;
+        padding: 4px;
+      }
+    }
+
+    &::after {
+      background-image: url(../assets/zen-game-full.svg);
+    }
+
+    &::before {
+      background-image: url(../assets/zen-game-outline.svg);
+    }
+  }
+}

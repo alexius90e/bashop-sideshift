@@ -2,6 +2,7 @@
   position: relative;
   height: 200vh;
   max-height: 2160px;
+  scroll-behavior: smooth;
 
   &__block {
     height: 50%;
