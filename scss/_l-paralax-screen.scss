@@ -1,0 +1,50 @@
+.paralax-screen {
+  position: relative;
+  height: 200vh;
+  max-height: 2160px;
+
+  &__block {
+    height: 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &_top {
+      position: relative;
+      background-image: url(../assets/bg-top.png);
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../assets/bg-columns.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    &_bottom {
+      background-image: url(../assets/bg-bottom.png);
+    }
+  }
+
+  &__stones {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    height: 50%;
+    background-image: url(../assets/stones.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translateY(-50%);
+  }
+}

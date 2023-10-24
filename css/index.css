@@ -1,0 +1,86 @@
+html {
+  color: #0A0A0A;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background-color: #0A0A0A;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 16px 0;
+}
+
+ul {
+  margin: 16px 0;
+  padding-left: 18px;
+}
+
+.paralax-screen {
+  position: relative;
+  height: 200vh;
+  max-height: 2160px;
+}
+.paralax-screen__block {
+  height: 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.paralax-screen__block_top {
+  position: relative;
+  background-image: url(../assets/bg-top.png);
+}
+.paralax-screen__block_top::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../assets/bg-columns.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.paralax-screen__block_bottom {
+  background-image: url(../assets/bg-bottom.png);
+}
+.paralax-screen__stones {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 50%;
+  background-image: url(../assets/stones.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
