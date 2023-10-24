@@ -9,6 +9,41 @@
     <script type="module" src="./js/index.js" defer></script>
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="./"><img src="./assets/logo.svg" alt="logo" /></a>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item">
+              <a class="header__nav-link" href="#game">GAME</a>
+            </li>
+
+            <li class="header__nav-list-item">
+              <a class="header__nav-link" href="#gzt">$GZT</a>
+            </li>
+
+            <li class="header__nav-list-item">
+              <a class="header__nav-link" href="#doc">DOCUMENTATION</a>
+            </li>
+
+            <li class="header__nav-list-item header__nav-list-item_social">
+              <span class="header__nav-list-item-title">social media:</span>
+              <a
+                class="header__nav-link header__nav-link_telegram"
+                href="https://web.telegram.org/"
+              ></a>
+              <a class="header__nav-link header__nav-link_twitter" href="https://twitter.com/"></a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="header__burger"></button>
+      </div>
+    </header>
+
     <main>
       <section class="paralax-screen">
         <div class="paralax-screen__block paralax-screen__block_top"></div>
@@ -26,7 +61,7 @@
         <div class="zen-divider__item"></div>
       </section>
 
-      <section class="your-story">
+      <section class="your-story" id="game">
         <div class="container">
           <figure class="your-story__image">
             <img src="./assets/your-story-bg.png" alt="your-story-bg" />
@@ -51,7 +86,7 @@
         </div>
       </section>
 
-      <section class="gzt">
+      <section class="gzt" id="gzt">
         <div class="container">
           <figure class="gzt__image">
             <img src="./assets/gxt-bg.png" alt="gzt" />
@@ -81,7 +116,7 @@
         </div>
       </section>
 
-      <section class="doc">
+      <section class="doc" id="doc">
         <div class="container">
           <div class="doc__info">
             <h2 class="doc__title">DOCUMENTATION:</h2>
