@@ -1,11 +1,11 @@
-.your-story {
-  padding: 54px 0;
+.gzt {
+  padding: 85px 0;
 
   @include mobile {
-    padding: 181px 0 50px;
+    padding: 50px 0 45px;
   }
 
-  .container {
+  & .container {
     position: relative;
   }
 
@@ -24,8 +24,8 @@
   &__info {
     position: absolute;
     top: 50%;
-    right: 15px;
-    max-width: 50.5%;
+    left: 15px;
+    max-width: 590px;
     transform: translateY(-50%);
 
     @include laptop {
@@ -58,15 +58,45 @@
     @include mobile {
       font-size: 16px;
     }
+
+    &_contract {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 100%;
+      cursor: pointer;
+
+      @include mobile {
+        align-items: flex-start;
+        flex-direction: column;
+        
+      }
+    }
+  }
+
+  &__contract {
+    display: inline-block;
+    padding: 8px 51px 6px 16px;
+    word-break: break-all;
+    background-color: #3D3D3D;
+    background-image: url(../assets/select-multiple.svg);
+    background-repeat: no-repeat;
+    background-position: center right 16px;
+
+    @include mobile {
+      font-size: 15px;
+    }
   }
 
   &__buttons {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    gap: 24px;
 
     @include laptop {
       justify-content: flex-start;
+      gap: 10px;
     }
   }
 }
