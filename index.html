@@ -6,6 +6,10 @@
     <title>ZEN GAME</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"
+      defer
+    ></script>
     <script type="module" src="./js/index.js" defer></script>
   </head>
   <body>
@@ -47,10 +51,21 @@
     <main class="main">
       <section class="paralax-screen">
         <div class="paralax-screen__block paralax-screen__block_top sticky" id="paralaxTop"></div>
-        <div class="paralax-screen__block paralax-screen__block_bottom sticky" id="paralaxBottom"></div>
+        <div
+          class="paralax-screen__block paralax-screen__block_bottom sticky"
+          id="paralaxBottom"
+        ></div>
         <div class="paralax-screen__stones sticky"></div>
 
         <div class="paralax-screen__scroll"></div>
+      </section>
+
+      <section class="paralaxz">
+        <div class="thumbnail paralaxz__block paralaxz__block_top" id="paralaxTop1"></div>
+        <div class="thumbnail paralaxz__block paralaxz__block_bottom" id="paralaxBottom1"></div>
+        <div class="paralaxz__stones"></div>
+
+        <div class="paralaxz__scroll"></div>
       </section>
 
       <section class="zen-divider">

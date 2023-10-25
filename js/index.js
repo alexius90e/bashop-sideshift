@@ -36,9 +36,26 @@ window.addEventListener('scroll', (event) => {
 
   if (window.scrollY > paralaxHeight * 0.35) paralaxTop.classList.add('active');
   if (window.scrollY <= paralaxHeight * 0.35) paralaxTop.classList.remove('active');
-
 });
 
-paralaxTop.addEventListener('scroll', () => {
-  console.log(scrollDirection);
+const paralaxz = document.querySelector('.paralaxz');
+
+const paralaxzImg1 = document.getElementById('paralaxTop1');
+
+const paralaxzImg2 = document.getElementById('paralaxBottom1');
+
+window.addEventListener('scroll', (event) => {
+  const paralaxHeight = paralaxz.offsetHeight;
+
+  const position = window.scrollY / paralaxHeight >= 1 ? 1 : window.scrollY / paralaxHeight;
+
+  const bottomDelta = 30 - position * 60 > 0 ? 30 - position * 60 : 0;
+
+  if (position >= 1) return;
+
+  paralaxzImg1.style.transform = `translate3d(0px, ${position * 100}%, 0px)`;
+
+  paralaxzImg2.style.transform = `translate3d(0px, ${bottomDelta}%, 0px)`;
+
+  console.log(position);
 });
