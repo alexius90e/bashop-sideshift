@@ -8,23 +8,66 @@
     max-height: 1840px;
   }
 
+  &__scroll {
+    position: absolute;
+    top: 10vh;
+    right: 10%;
+    z-index: 3;
+    height: 80vh;
+    width: 2px;
+    background-color: #FF6E20;
+
+    @include laptop {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 40%;
+      height: 42px;
+      width: 42px;
+      border-radius: 42px;
+      background-color: #FF6E20;
+      background-image: url(../assets/mouse.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      transform: translateX(calc(-50% + 1px));
+    }
+  }
+
   &__block {
     height: 50%;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
 
     &_top {
-      position: relative;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 0;
       background-image: url(../assets/bg-top.png);
+      // transition: all linear 0.05s;
 
       @include mobile {
         background-image: url(../assets/bg-top-sm.png);
       }
+
+      &.active {
+        background-image: url(../assets/bg-bottom.png);
+
+        @include mobile {
+          background-image: url(../assets/bg-bottom-sm.png);
+        }
+      }
     }
 
     &_bottom {
+      display: none;
       background-image: url(../assets/bg-bottom.png);
 
       @include mobile {

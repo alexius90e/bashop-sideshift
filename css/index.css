@@ -115,11 +115,11 @@ ul {
   z-index: 100;
   padding: 53px 0;
   background-color: #0A0A0A;
+  opacity: 0.8;
 }
 @media (max-width: 768px) {
   .header {
     padding: 27px 0;
-    opacity: 0.8;
   }
 }
 .header.active {
@@ -164,8 +164,8 @@ ul {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     background-color: #0A0A0A;
-    -webkit-transition: all linear 0.2s;
-    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.1s;
+    transition: all linear 0.1s;
   }
 }
 .header__nav.active {
@@ -298,6 +298,28 @@ ul {
   background-image: url(../assets/zen-bg.svg);
 }
 
+div.parallax-image* {
+  background-size: cover;
+  top: 0;
+}
+
+.sticky {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, red, blue); /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+
+div.parallax-image1 {
+  background-image: url(../assets/bg-top.png);
+}
+
+div.parallax-image2 {
+  background-image: url(../assets/bg-bottom.png);
+}
+
 .paralax-screen {
   position: relative;
   height: 200vh;
@@ -309,15 +331,46 @@ ul {
     max-height: 1840px;
   }
 }
+.paralax-screen__scroll {
+  position: absolute;
+  top: 10vh;
+  right: 10%;
+  z-index: 3;
+  height: 80vh;
+  width: 2px;
+  background-color: #FF6E20;
+}
+@media (max-width: 992px) {
+  .paralax-screen__scroll {
+    display: none;
+  }
+}
+.paralax-screen__scroll::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  height: 42px;
+  width: 42px;
+  border-radius: 42px;
+  background-color: #FF6E20;
+  background-image: url(../assets/mouse.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  -webkit-transform: translateX(calc(-50% + 1px));
+      -ms-transform: translateX(calc(-50% + 1px));
+          transform: translateX(calc(-50% + 1px));
+}
 .paralax-screen__block {
   height: 50%;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .paralax-screen__block_top {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 0;
   background-image: url(../assets/bg-top.png);
 }
 @media (max-width: 576px) {
@@ -325,7 +378,16 @@ ul {
     background-image: url(../assets/bg-top-sm.png);
   }
 }
+.paralax-screen__block_top.active {
+  background-image: url(../assets/bg-bottom.png);
+}
+@media (max-width: 576px) {
+  .paralax-screen__block_top.active {
+    background-image: url(../assets/bg-bottom-sm.png);
+  }
+}
 .paralax-screen__block_bottom {
+  display: none;
   background-image: url(../assets/bg-bottom.png);
 }
 @media (max-width: 576px) {

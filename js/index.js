@@ -27,3 +27,18 @@ gztCopyText.addEventListener('click', (event) => {
   const text = event.currentTarget.innerText;
   navigator.clipboard.writeText(text);
 });
+
+const paralaxTop = document.getElementById('paralaxTop');
+const paralaxScreen = document.querySelector('.paralax-screen');
+
+window.addEventListener('scroll', (event) => {
+  const paralaxHeight = paralaxScreen.offsetHeight;
+
+  if (window.scrollY > paralaxHeight * 0.35) paralaxTop.classList.add('active');
+  if (window.scrollY <= paralaxHeight * 0.35) paralaxTop.classList.remove('active');
+
+});
+
+paralaxTop.addEventListener('scroll', () => {
+  console.log(scrollDirection);
+});
