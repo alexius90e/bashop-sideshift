@@ -2,7 +2,7 @@
   position: relative;
   height: 200vh;
   max-height: 2160px;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
   @include mobile {
     max-height: 1840px;
@@ -30,13 +30,6 @@
       @include mobile {
         background-image: url(../assets/bg-bottom-sm.png);
       }
-    }
-  }
-
-  @supports (-webkit-touch-callout: none) {
-    .imageDiv {
-      background-attachment: scroll;
-      background-size: auto 100vh;
     }
   }
 

@@ -84,9 +84,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: all linear 0.1s;
 
     &:hover &-image {
-      filter: drop-shadow(-4px 4px 0px #ff6e20);
+      filter: drop-shadow(-3px 4px 0px #ff6e20);
     }
 
     &-image {
@@ -94,7 +95,7 @@
       height: 140px;
       width: 140px;
       background: url(../assets/doc-link-bg.svg) center no-repeat;
-      transition: all ease-in 0.1s;
+      transition: all linear 0.1s;
 
       &::after {
         content: '';

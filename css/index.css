@@ -15,14 +15,19 @@ body {
   position: relative;
   margin: 0;
   background-color: #0A0A0A;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 @media (max-width: 768px) {
   body.active {
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
     position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
   }
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a,
@@ -138,6 +143,10 @@ ul {
     padding: 0 20px;
   }
 }
+.header__logo {
+  width: 49px;
+  height: 24px;
+}
 .header__nav {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -148,15 +157,15 @@ ul {
     position: absolute;
     z-index: 100;
     top: 53px;
-    left: -200%;
+    left: -120%;
     height: calc(100vh - 78px);
     width: 100%;
     padding: 40px 15px 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     background-color: #0A0A0A;
-    -webkit-transition: all ease-in-out 0.3s;
-    transition: all ease-in-out 0.3s;
+    -webkit-transition: all linear 0.2s;
+    transition: all linear 0.2s;
   }
 }
 .header__nav.active {
@@ -245,6 +254,9 @@ ul {
     background-color: rgba(79, 79, 79, 0);
   }
 }
+.header__nav-link:hover {
+  background-color: rgba(79, 79, 79, 0);
+}
 .header__burger {
   display: none;
   height: 25px;
@@ -267,10 +279,12 @@ ul {
 
 .main {
   position: relative;
+  z-index: 1;
   background-image: url(../assets/ellipse.svg);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 2700px;
+  background-color: #0A0A0A;
 }
 .main::before {
   content: "";
@@ -288,6 +302,7 @@ ul {
   position: relative;
   height: 200vh;
   max-height: 2160px;
+  scroll-behavior: smooth;
 }
 @media (max-width: 576px) {
   .paralax-screen {
@@ -316,12 +331,6 @@ ul {
 @media (max-width: 576px) {
   .paralax-screen__block_bottom {
     background-image: url(../assets/bg-bottom-sm.png);
-  }
-}
-@supports (-webkit-touch-callout: none) {
-  .paralax-screen .imageDiv {
-    background-attachment: scroll;
-    background-size: auto 100vh;
   }
 }
 .paralax-screen__stones {
@@ -700,18 +709,20 @@ ul {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  -webkit-transition: all linear 0.1s;
+  transition: all linear 0.1s;
 }
 .doc__link:hover .doc__link-image {
-  -webkit-filter: drop-shadow(-4px 4px 0px #ff6e20);
-          filter: drop-shadow(-4px 4px 0px #ff6e20);
+  -webkit-filter: drop-shadow(-3px 4px 0px #ff6e20);
+          filter: drop-shadow(-3px 4px 0px #ff6e20);
 }
 .doc__link-image {
   position: relative;
   height: 140px;
   width: 140px;
   background: url(../assets/doc-link-bg.svg) center no-repeat;
-  -webkit-transition: all ease-in 0.1s;
-  transition: all ease-in 0.1s;
+  -webkit-transition: all linear 0.1s;
+  transition: all linear 0.1s;
 }
 .doc__link-image::after {
   content: "";

@@ -29,6 +29,8 @@
   }
 
   &__logo {
+    width: 49px;
+    height: 24px;
   }
 
   &__nav {
@@ -38,13 +40,13 @@
       position: absolute;
       z-index: 100;
       top: 53px;
-      left: -200%;
+      left: -120%;
       height: calc(100vh - 78px);
       width: 100%;
       padding: 40px 15px 0;
       box-sizing: border-box;
       background-color: $black;
-      transition: all ease-in-out 0.3s;
+      transition: all linear 0.2s;
     }
 
     &.active {
@@ -118,6 +120,10 @@
 
       @include tablet {
         padding: 0;
+        background-color: rgba($color: #4f4f4f, $alpha: 0);
+      }
+
+      &:hover {
         background-color: rgba($color: #4f4f4f, $alpha: 0);
       }
     }

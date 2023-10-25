@@ -16,14 +16,20 @@ body {
   position: relative;
   margin: 0;
   background-color: $black;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   &.active {
     @include tablet {
-      height: 100%;
-      overflow: hidden;
-      width: 100%;
       position: fixed;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
     }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
