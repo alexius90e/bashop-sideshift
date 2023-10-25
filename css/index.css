@@ -434,10 +434,10 @@ div.parallax-image2 {
 }
 .paralaxz__scroll {
   position: absolute;
-  top: 10vh;
+  top: 5%;
   right: 10%;
-  z-index: 3;
-  height: 80vh;
+  bottom: 5%;
+  z-index: 6;
   width: 2px;
   background-color: #ff6e20;
 }
@@ -446,10 +446,9 @@ div.parallax-image2 {
     display: none;
   }
 }
-.paralaxz__scroll::before {
-  content: "";
+.paralaxz__scroll-item {
   position: absolute;
-  top: 40%;
+  top: 10%;
   height: 42px;
   width: 42px;
   border-radius: 42px;
@@ -461,6 +460,7 @@ div.parallax-image2 {
   -webkit-transform: translateX(calc(-50% + 1px));
       -ms-transform: translateX(calc(-50% + 1px));
           transform: translateX(calc(-50% + 1px));
+  will-change: top;
 }
 .paralaxz__block {
   position: relative;

@@ -28,15 +28,15 @@ gztCopyText.addEventListener('click', (event) => {
   navigator.clipboard.writeText(text);
 });
 
-const paralaxTop = document.getElementById('paralaxTop');
-const paralaxScreen = document.querySelector('.paralax-screen');
+// const paralaxTop = document.getElementById('paralaxTop');
+// const paralaxScreen = document.querySelector('.paralax-screen');
 
-window.addEventListener('scroll', (event) => {
-  const paralaxHeight = paralaxScreen.offsetHeight;
+// window.addEventListener('scroll', (event) => {
+//   const paralaxHeight = paralaxScreen.offsetHeight;
 
-  if (window.scrollY > paralaxHeight * 0.35) paralaxTop.classList.add('active');
-  if (window.scrollY <= paralaxHeight * 0.35) paralaxTop.classList.remove('active');
-});
+//   if (window.scrollY > paralaxHeight * 0.35) paralaxTop.classList.add('active');
+//   if (window.scrollY <= paralaxHeight * 0.35) paralaxTop.classList.remove('active');
+// });
 
 const paralaxz = document.querySelector('.paralaxz');
 
@@ -44,12 +44,16 @@ const paralaxzImg1 = document.getElementById('paralaxTop1');
 
 const paralaxzImg2 = document.getElementById('paralaxBottom1');
 
-window.addEventListener('scroll', (event) => {
+const paralaxzScroll = document.querySelector('.paralaxz__scroll-item');
+
+window.addEventListener('scroll', () => {
   const paralaxHeight = paralaxz.offsetHeight;
 
   const position = window.scrollY / paralaxHeight >= 1 ? 1 : window.scrollY / paralaxHeight;
 
   const bottomDelta = 30 - position * 60 > 0 ? 30 - position * 60 : 0;
+
+  const scrollPosition = 10 + position * 160 >= 90 ? 90 : 10 + position * 160;
 
   if (position >= 1) return;
 
@@ -57,5 +61,5 @@ window.addEventListener('scroll', (event) => {
 
   paralaxzImg2.style.transform = `translate3d(0px, ${bottomDelta}%, 0px)`;
 
-  console.log(position);
+  paralaxzScroll.style.top = `${scrollPosition}%`;
 });
