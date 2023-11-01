@@ -69,7 +69,6 @@
       @include mobile {
         align-items: flex-start;
         flex-direction: column;
-        
       }
     }
   }
@@ -78,13 +77,18 @@
     display: inline-block;
     padding: 8px 51px 6px 16px;
     word-break: break-all;
-    background-color: #3D3D3D;
+    background-color: #3d3d3d;
     background-image: url(../assets/select-multiple.svg);
     background-repeat: no-repeat;
     background-position: center right 16px;
+    background-size: 24px;
 
     @include mobile {
       font-size: 15px;
+    }
+
+    &.active {
+      background-image: url(../assets/ok-icon.svg);
     }
   }
 

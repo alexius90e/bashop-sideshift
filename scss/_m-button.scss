@@ -31,4 +31,20 @@
   &:active {
     transform: scale(0.98);
   }
+
+  &.disable {
+    background: url(../assets/button-disable.svg) center no-repeat;
+
+    @include mobile {
+      background: #4F4F4F;
+    }
+
+    &:hover {
+      transform: scale(1);
+    }
+  
+    &:active {
+      transform: scale(1);
+    }
+  }
 }

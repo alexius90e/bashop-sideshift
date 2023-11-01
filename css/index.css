@@ -106,6 +106,24 @@ ul {
       -ms-transform: scale(0.98);
           transform: scale(0.98);
 }
+.button.disable {
+  background: url(../assets/button-disable.svg) center no-repeat;
+}
+@media (max-width: 576px) {
+  .button.disable {
+    background: #4F4F4F;
+  }
+}
+.button.disable:hover {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.button.disable:active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
 
 .header {
   position: fixed;
@@ -736,15 +754,19 @@ div.parallax-image2 {
   display: inline-block;
   padding: 8px 51px 6px 16px;
   word-break: break-all;
-  background-color: #3D3D3D;
+  background-color: #3d3d3d;
   background-image: url(../assets/select-multiple.svg);
   background-repeat: no-repeat;
   background-position: center right 16px;
+  background-size: 24px;
 }
 @media (max-width: 576px) {
   .gzt__contract {
     font-size: 15px;
   }
+}
+.gzt__contract.active {
+  background-image: url(../assets/ok-icon.svg);
 }
 .gzt__buttons {
   display: -webkit-box;

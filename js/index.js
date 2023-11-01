@@ -24,19 +24,12 @@ nav.addEventListener('click', (event) => {
 const gztCopyText = document.querySelector('.gzt__contract');
 
 gztCopyText.addEventListener('click', (event) => {
+  const isCopied = event.currentTarget.classList.contains('active');
+  if (isCopied) return;
   const text = event.currentTarget.innerText;
   navigator.clipboard.writeText(text);
+  event.currentTarget.classList.add('active');
 });
-
-// const paralaxTop = document.getElementById('paralaxTop');
-// const paralaxScreen = document.querySelector('.paralax-screen');
-
-// window.addEventListener('scroll', (event) => {
-//   const paralaxHeight = paralaxScreen.offsetHeight;
-
-//   if (window.scrollY > paralaxHeight * 0.35) paralaxTop.classList.add('active');
-//   if (window.scrollY <= paralaxHeight * 0.35) paralaxTop.classList.remove('active');
-// });
 
 const paralaxz = document.querySelector('.paralaxz');
 
