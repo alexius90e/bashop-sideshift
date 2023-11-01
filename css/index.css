@@ -107,11 +107,12 @@ ul {
           transform: scale(0.98);
 }
 .button.disable {
+  position: relative;
   background: url(../assets/button-disable.svg) center no-repeat;
 }
 @media (max-width: 576px) {
   .button.disable {
-    background: #4F4F4F;
+    background: #4f4f4f;
   }
 }
 .button.disable:hover {
@@ -123,6 +124,27 @@ ul {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
+}
+.button.disable::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(../assets/lock.svg) center no-repeat;
+  background-size: 18px;
+  -webkit-transform: translateY(-60%);
+      -ms-transform: translateY(-60%);
+          transform: translateY(-60%);
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+  will-change: opacity;
+}
+.button.disable:hover::after {
+  opacity: 1;
 }
 
 .header {

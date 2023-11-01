@@ -33,18 +33,39 @@
   }
 
   &.disable {
+    position: relative;
     background: url(../assets/button-disable.svg) center no-repeat;
 
     @include mobile {
-      background: #4F4F4F;
+      background: #4f4f4f;
     }
 
     &:hover {
       transform: scale(1);
     }
-  
+
     &:active {
       transform: scale(1);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      display: block;
+      width: 18px;
+      height: 18px;
+      background: url(../assets/lock.svg) center no-repeat;
+      background-size: 18px;
+      transform: translateY(-60%);
+      opacity: 0;
+      transition: opacity ease-in-out 0.2s;
+      will-change: opacity;
+    }
+
+    &:hover::after {
+      opacity: 1;
     }
   }
 }
