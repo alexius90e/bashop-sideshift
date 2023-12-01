@@ -12,6 +12,25 @@
     padding: 27px 0;
   }
 
+  &_launch {
+    display: none;
+    padding: 50px 0;
+    background-color: rgba($color: $black, $alpha: 0);
+    opacity: 1;
+
+    @include laptop {
+      padding: 20px 0;
+    }
+
+    &.active {
+      display: block;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
   &.active {
     opacity: 1;
   }
@@ -31,6 +50,23 @@
   &__logo {
     width: 49px;
     height: 24px;
+  }
+
+  &_launch &__logo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: auto;
+
+    & a {
+      display: block;
+      height: 29px;
+
+      & img {
+        height: 100%;
+        width: auto;
+      }
+    }
   }
 
   &__nav {
@@ -143,6 +179,55 @@
 
     &.active {
       transform: rotate(-90deg);
+    }
+  }
+
+  &__wallet {
+    flex: 0 0 auto;
+
+    &-connect-button {
+      display: none;
+
+      @include mobile {
+        height: 50px;
+        width: 250px;
+        border-radius: 0;
+        background: url(../assets/button.svg) center no-repeat;
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    &-code {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 16px 4px;
+      background-color: #4f4f4f;
+
+      &.active {
+        display: flex;
+      }
+
+      &-text {
+        color: $white;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      &-exit {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        border: none;
+        background: url(../assets/exit.svg) center no-repeat;
+        cursor: pointer;
+      }
     }
   }
 }

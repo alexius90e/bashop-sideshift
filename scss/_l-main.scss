@@ -1,15 +1,14 @@
 .main {
-  // display: none;
   position: relative;
   z-index: 1;
   background-image: url(../assets/ellipse.svg);
   background-repeat: no-repeat;
-  background-position: right  center;
+  background-position: right center;
   background-size: 2700px;
   background-color: $black;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -18,6 +17,14 @@
     height: 100%;
     width: 100%;
     background-image: url(../assets/zen-bg.svg);
+  }
+
+  &_launch {
+    background: none;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
