@@ -1,0 +1,53 @@
+.launch-atm {
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url(../assets/atm-small.jpg) center repeat-x;
+  background-size: 2369px auto;
+
+  @include desktop {
+    background-size: cover;
+  }
+
+  &.active {
+    display: flex;
+  }
+
+  @keyframes goleft {
+    from {
+      left: 70%;
+    }
+    to {
+      left: 60%;
+    }
+  }
+
+  &__men {
+    position: absolute;
+    left: 60%;
+    bottom: 0;
+    height: 81.5%;
+    width: auto;
+    animation: goleft 0.75s 1 ease-out;
+  }
+
+  &__button {
+    position: relative;
+    top: 35px;
+    left: 34px;
+    width: 510px;
+    height: 580px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    @include desktop {
+      top: 27px;
+      left: 27px;
+      width: 416px;
+      height: 467px;
+    }
+  }
+}

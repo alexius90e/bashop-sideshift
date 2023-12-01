@@ -9,20 +9,16 @@
     <script type="module" src="./js/launch.js" defer></script>
   </head>
   <body>
-    <header class="header header_launch active">
+    <header class="header header_launch">
       <div class="container">
         <div class="header__logo">
           <a href="./"><img src="./assets/logo.svg" alt="logo" /></a>
         </div>
 
         <div class="header__wallet">
-          <button class="button header__wallet-connect-button active">
-            connect wallet
-          </button>
+          <button class="button header__wallet-connect-button active">connect wallet</button>
           <div class="header__wallet-code">
-            <span class="header__wallet-code-text"
-              >1GXPWTNnVC8boQeX6HEiaimGNf374iJZmj</span
-            >
+            <span class="header__wallet-code-text">1GXPWTNnVC8boQeX6HEiaimGNf374iJZmj</span>
             <button class="header__wallet-code-exit"></button>
           </div>
         </div>
@@ -32,14 +28,93 @@
     <main class="main main_launch">
       <section class="launch-section launch-street">
         <div class="launch-street__buildings">
-          <div class="launch-street__building launch-street__building_shop">
+          <div class="launch-street__building launch-street__building_shop locked">
+            <span class="launch-street__building-tag">Locked</span>
             <img src="./assets/shop.png" alt="shop" />
           </div>
           <div class="launch-street__building launch-street__building_bank">
+            <span class="launch-street__building-tag">Locked</span>
             <img src="./assets/bank.png" alt="bank" />
           </div>
-          <div class="launch-street__building launch-street__building_pharmacy">
+          <div class="launch-street__building launch-street__building_pharmacy locked">
+            <span class="launch-street__building-tag">Locked</span>
             <img src="./assets/pharmacy.png" alt="pharmacy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="launch-section launch-atm">
+        <img class="launch-atm__men" src="./assets/atm-men.png" alt="atm-men" />
+        <button class="launch-atm__button"></button>
+      </section>
+
+      <section class="launch-section launch-stacking active">
+        <div class="launch-stacking__screen">
+          <div class="launch-stacking__content">
+            <div class="launch-stacking__content-controls">
+              <div class="launch-stacking__content-buttons">
+                <button
+                  class="launch-stacking__content-button launch-stacking__content-button_close active"
+                ></button>
+
+                <button
+                  class="launch-stacking__content-button launch-stacking__content-button_back"
+                ></button>
+              </div>
+
+              <div class="launch-stacking__balance">
+                <div class="launch-stacking__balance-item">
+                  <h5 class="launch-stacking__balance-title">Balance:</h5>
+                  <div class="launch-stacking__balance-info"><span>00000</span> $GZT</div>
+                </div>
+
+                <div class="launch-stacking__balance-item">
+                  <h5 class="launch-stacking__balance-title">Balance:</h5>
+                  <div class="launch-stacking__balance-info"><span>00000</span> $GZT</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="launch-stacking__content-body">
+              <div class="launch-stacking__buttons active">
+                <button class="button launch-stacking__stack-button">14 days staking</button>
+                <button class="button launch-stacking__stack-button">30 days staking</button>
+                <button class="button launch-stacking__stack-button">60 days staking</button>
+              </div>
+
+              <div class="launch-stacking__approve">
+                <div class="launch-stacking__approve-info">
+                  <h3 class="launch-stacking__approve-title">$GZT Staking</h3>
+                  <p class="launch-stacking__approve-text">
+                    $GZT tokens will be staked for a set period of time. Upon completion of this
+                    period, you will be able to claim your tokens along with a fixed reward. The
+                    minimum amount of $GZT required for staking: XXX. Additionally, you will receive
+                    a ZEN GOLD NFT BOX.
+                  </p>
+                  <p class="launch-stacking__approve-text">
+                    Select the Amount of $GZT for Staking:
+                  </p>
+
+                  <label class="launch-stacking__approve-input">
+                    <input type="number" />
+                    <span>$GZT</span>
+                  </label>
+                </div>
+
+                <div class="launch-stacking__approve-buttons">
+                  <button
+                    class="button launch-stacking__approve-button launch-stacking__approve-button_approve active"
+                  >
+                    approve
+                  </button>
+                  <button
+                    class="button launch-stacking__approve-button launch-stacking__approve-button_staking"
+                  >
+                    staking
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

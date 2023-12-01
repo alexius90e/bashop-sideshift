@@ -1,5 +1,11 @@
 .launch-section {
+  display: none;
   max-height: 1080px;
   height: 100vh;
+  margin: auto;
   box-sizing: border-box;
+
+  &.active {
+    display: block;
+  }
 }

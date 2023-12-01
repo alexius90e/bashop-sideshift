@@ -1,8 +1,13 @@
 .launch-street {
-  display: flex;
+  display: none;
   align-items: flex-end;
   justify-content: center;
-  background: url(../assets/launch-bg.jpg) bottom center no-repeat;
+  background: url(../assets/launch-bg.jpg) bottom center repeat-x;
+  background-size: auto 100%;
+
+  &.active {
+    display: flex;
+  }
 
   &__buildings {
     position: relative;
@@ -10,16 +15,18 @@
     align-items: flex-end;
     justify-content: center;
     height: 75%;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__building {
+    position: relative;
     display: flex;
     align-items: flex-end;
+    max-height: max-content;
     height: 100%;
-
-    &_shop,
-    &_pharmacy {
-    }
 
     &_shop {
       margin-right: -62px;
@@ -44,6 +51,61 @@
 
       &:hover {
         filter: drop-shadow(0px -10px 80px $white);
+      }
+    }
+
+    &-tag {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      z-index: 2;
+      display: none;
+      align-items: center;
+      gap: 4px;
+      padding: 11px 14px;
+      color: $white;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      text-transform: uppercase;
+      background: rgba(51, 51, 51, 0.7);
+      box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(2px);
+      transform: translateX(-50%);
+
+      @include laptop {
+        top: 50%;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-top: -4px;
+        background: url(../assets/lock-2.svg) center no-repeat;
+      }
+    }
+
+    &.locked &-tag {
+      display: flex;
+    }
+
+    &_shop &-tag {
+      transform: translateX(calc(-50% + 30px));
+
+      @media screen and (max-height: 560px) {
+        transform: translateX(-60%);
+      }
+    }
+
+    &_pharmacy &-tag {
+      transform: translateX(calc(-50% - 30px));
+
+      @media screen and (max-height: 560px) {
+        transform: translateX(-40%);
       }
     }
   }
