@@ -168,7 +168,7 @@ ul {
 .header_launch.active {
   display: block;
 }
-@media (max-width: 768px) {
+@media screen and (orientation: portrait) {
   .header_launch.active {
     display: none;
   }
@@ -382,6 +382,47 @@ ul {
 }
 .main_launch::before {
   display: none;
+}
+@media screen and (orientation: portrait) {
+  .main_launch::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+.main__disclaimer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media screen and (orientation: portrait) {
+  .main__disclaimer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.main__disclaimer-text {
+  max-width: 360px;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+}
+.main__disclaimer img {
+  max-width: 100px;
+  height: auto;
 }
 
 div.parallax-image* {
@@ -942,6 +983,11 @@ div.parallax-image2 {
   background: url(../assets/launch-bg.jpg) bottom center repeat-x;
   background-size: auto 100%;
 }
+@media screen and (orientation: portrait) {
+  .launch-street {
+    filter: blur(10px);
+  }
+}
 .launch-street.active {
   display: flex;
 }
@@ -952,7 +998,7 @@ div.parallax-image2 {
   justify-content: center;
   height: 75%;
 }
-@media (max-width: 768px) {
+@media screen and (orientation: portrait) {
   .launch-street__buildings {
     display: none;
   }
@@ -1049,6 +1095,11 @@ div.parallax-image2 {
   background: url(../assets/atm-small.jpg) center repeat-x;
   background-size: 2369px auto;
 }
+@media screen and (orientation: portrait) {
+  .launch-atm {
+    filter: blur(10px);
+  }
+}
 @media (max-width: 1200px) {
   .launch-atm {
     background-size: cover;
@@ -1073,6 +1124,11 @@ div.parallax-image2 {
   width: auto;
   animation: goleft 0.75s 1 ease-out;
 }
+@media screen and (orientation: portrait) {
+  .launch-atm__men {
+    display: none;
+  }
+}
 .launch-atm__button {
   position: relative;
   top: 35px;
@@ -1096,6 +1152,11 @@ div.parallax-image2 {
   background: url(../assets/atm-small.jpg) bottom center repeat-x;
   background-size: auto 100%;
 }
+@media screen and (orientation: portrait) {
+  .launch-stacking {
+    filter: blur(10px);
+  }
+}
 .launch-stacking.active {
   display: flex;
   align-items: center;
@@ -1111,6 +1172,11 @@ div.parallax-image2 {
   aspect-ratio: 16/9;
   background: url(../assets/screen.jpg) center no-repeat;
   background-size: contain;
+}
+@media screen and (orientation: portrait) {
+  .launch-stacking__screen {
+    display: none;
+  }
 }
 .launch-stacking__content {
   display: flex;

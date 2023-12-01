@@ -6,6 +6,11 @@
   overflow: hidden;
   background: url(../assets/atm-small.jpg) center repeat-x;
   background-size: 2369px auto;
+  
+  @media screen and (orientation:portrait) {
+    filter: blur(10px);
+  }
+
 
   @include desktop {
     background-size: cover;
@@ -31,6 +36,10 @@
     height: 81.5%;
     width: auto;
     animation: goleft 0.75s 1 ease-out;
+
+    @media screen and (orientation:portrait) {
+      display: none;
+    }
   }
 
   &__button {

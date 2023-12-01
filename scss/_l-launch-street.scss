@@ -5,6 +5,10 @@
   background: url(../assets/launch-bg.jpg) bottom center repeat-x;
   background-size: auto 100%;
 
+  @media screen and (orientation:portrait) {
+    filter: blur(10px);
+  }
+
   &.active {
     display: flex;
   }
@@ -15,8 +19,9 @@
     align-items: flex-end;
     justify-content: center;
     height: 75%;
+    
 
-    @include tablet {
+    @media screen and (orientation:portrait) {
       display: none;
     }
   }
