@@ -980,7 +980,7 @@ div.parallax-image2 {
   display: none;
   align-items: flex-end;
   justify-content: center;
-  background: url(../assets/launch-bg.jpg) bottom center repeat-x;
+  background: url(../assets/launch-bg-min.webp) bottom center repeat-x;
   background-size: auto 100%;
 }
 @media screen and (orientation: portrait) {
@@ -1092,7 +1092,7 @@ div.parallax-image2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: url(../assets/atm-small.jpg) center repeat-x;
+  background: url(../assets/atm-small-min.webp) center repeat-x;
   background-size: 2369px auto;
 }
 @media screen and (orientation: portrait) {
@@ -1123,6 +1123,7 @@ div.parallax-image2 {
   height: 81.5%;
   width: auto;
   animation: goleft 0.75s 1 ease-out;
+  will-change: left;
 }
 @media screen and (orientation: portrait) {
   .launch-atm__men {
@@ -1149,7 +1150,7 @@ div.parallax-image2 {
 }
 
 .launch-stacking {
-  background: url(../assets/atm-small.jpg) bottom center repeat-x;
+  background: url(../assets/atm-small-min.webp) bottom center repeat-x;
   background-size: auto 100%;
 }
 @media screen and (orientation: portrait) {
@@ -1170,7 +1171,7 @@ div.parallax-image2 {
   max-height: 100%;
   width: 100%;
   aspect-ratio: 16/9;
-  background: url(../assets/screen.jpg) center no-repeat;
+  background: url(../assets/screen-min.webp) center no-repeat;
   background-size: contain;
 }
 @media screen and (orientation: portrait) {

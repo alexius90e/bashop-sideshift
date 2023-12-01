@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: url(../assets/atm-small.jpg) center repeat-x;
+  background: url(../assets/atm-small-min.webp) center repeat-x;
   background-size: 2369px auto;
-  
+
   @media screen and (orientation:portrait) {
     filter: blur(10px);
   }
@@ -36,6 +36,7 @@
     height: 81.5%;
     width: auto;
     animation: goleft 0.75s 1 ease-out;
+    will-change: left;
 
     @media screen and (orientation:portrait) {
       display: none;

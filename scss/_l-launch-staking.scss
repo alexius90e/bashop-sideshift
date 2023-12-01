@@ -1,5 +1,5 @@
 .launch-stacking {
-  background: url(../assets/atm-small.jpg) bottom center repeat-x;
+  background: url(../assets/atm-small-min.webp) bottom center repeat-x;
   background-size: auto 100%;
 
   @media screen and (orientation: portrait) {
@@ -20,7 +20,7 @@
     max-height: 100%;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: url(../assets/screen.jpg) center no-repeat;
+    background: url(../assets/screen-min.webp) center no-repeat;
     background-size: contain;
 
     @media screen and (orientation: portrait) {
