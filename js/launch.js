@@ -25,11 +25,13 @@ const launchAtmButton = document.querySelector(".launch-atm__button");
 bankBody.addEventListener("click", () => {
   hideLaunchSections();
   launchAtm.classList.add("active");
+  launchHeader.classList.remove("active");
 });
 
 launchAtmButton.addEventListener("click", () => {
   hideLaunchSections();
   launchStacking.classList.add("active");
+  launchHeader.classList.remove("active");
 });
 
 const stackingButtonClose = document.querySelector(".launch-stacking__content-button_close");
@@ -45,6 +47,7 @@ stackingButtonClose.addEventListener("click", () => {
   launchStreet.classList.add("active");
   stackingButtonApprove.classList.add("active");
   stackingButtonStaking.classList.remove("active");
+  launchHeader.classList.add("active");
 });
 
 stackingButtonBack.addEventListener("click", () => {
